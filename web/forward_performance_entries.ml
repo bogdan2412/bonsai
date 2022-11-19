@@ -222,7 +222,7 @@ let iter_entries performance_observer_entry_list ~f =
     f { Entry.label; entry_type; start_time; duration })
 ;;
 
-let uuid_to_url uuid = [%string "%{Bonsai_bug_constants.script_origin}/%{uuid#Uuid}"]
+let uuid_to_url uuid = [%string "https://bonsai-bug/%{uuid#Uuid}"]
 
 let generate_uuid () =
   let random_state = Random.State.default in
